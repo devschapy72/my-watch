@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ACTIVE_NAB_BAR_COLOR */
+@layer components {
+  .active-nav.active {
+    @apply text-red-600;
+    @apply underline;
+  }
+}
