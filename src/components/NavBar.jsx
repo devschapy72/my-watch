@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { BsCart4 } from "react-icons/bs";
+import { useCartContext } from "../context/CartContext";
 
 const NavBar = () => {
+  const { total_items } = useCartContext();
   const [openSlider, setOpenSlider] = useState(false);
   const openBar = () => {
     setOpenSlider(!openSlider);
@@ -46,7 +49,20 @@ const NavBar = () => {
             Contact
           </NavLink>
         </li>
-        {/* <li>Login</li> */}
+
+        <NavLink
+          to="/cart"
+          className="active-nav hover:text-red-600 hover:underline duration-300"
+        >
+          <div className="relative">
+            <span className="text-3xl">
+              <BsCart4 />
+            </span>
+            <p className="absolute top-0 -right-1.5 bg-blue-500 text-white w-5 h-5 rounded-full text-center">
+              {total_items}
+            </p>
+          </div>
+        </NavLink>
       </ul>
 
       {/* opern_bar */}
@@ -118,6 +134,24 @@ const NavBar = () => {
               Contact
             </NavLink>
           </li>
+          <hr className="border-gray-600 border-[2px] my-3" />
+          <li>
+            <NavLink
+              to="/cart"
+              onClick={closeBar}
+              className="active-nav hover:text-red-600 hover:underline duration-300"
+            >
+              <div className="relative pl-5">
+                <span className="text-3xl">
+                  <BsCart4 />
+                </span>
+                <p className="absolute top-0 left-8 text-white flex justify-center items-center bg-blue-500 w-5 h-5 rounded-full text-center">
+                  {total_items}
+                </p>
+              </div>
+            </NavLink>
+          </li>
+
           <hr className="border-gray-600 border-[2px] my-3" />
           <li className="pl-5" onClick={closeBar}>
             Login
