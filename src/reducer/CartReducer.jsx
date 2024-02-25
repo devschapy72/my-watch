@@ -2,6 +2,42 @@ const CartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
       let { id, activeColor, amount, product } = action.payload;
+
+      // EXISTING_PRODUCT_**Start**
+      let existingProduct = state.cart.find(
+        (curItems) => curItems.id == id + activeColor
+      );
+      // Declare updateProduct here
+      let updateProduct;
+      if (existingProduct) {
+        updateProduct = state.cart.map((items) => {
+          if (items.id == id + activeColor) {
+            let newAmount = items.amount + amount;
+            if (newAmount >= items.max) {
+              newAmount = items.max;
+            }
+            return {
+              ...items,
+              amount: newAmount,
+            };
+          } else {
+            return items;
+          }
+        });
+        return {
+          ...state,
+          cart: updateProduct,
+        };
+      } else {
+        if (!product) {
+          console.error("Product is undefined in action payload.");
+          return state;
+        }
+      }
+
+      // EXISTING_PRODUCT_**END**
+
+      // ADD_CART_ITEMS
       let cartProduct;
 
       cartProduct = {

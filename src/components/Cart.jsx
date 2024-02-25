@@ -2,9 +2,10 @@ import React from "react";
 import { useCartContext } from "../context/CartContext";
 import CartItems from "./CartItems";
 import { NavLink } from "react-router-dom";
+import PriceFormat from "./PriceFormat";
 
 const Cart = () => {
-  const { cart, clearAll } = useCartContext();
+  const { cart, clearAll, total_price, delivery } = useCartContext();
 
   return (
     <div className="w-11/12 sm:w-10/12 lg:w-9/12 mx-auto">
@@ -37,6 +38,29 @@ const Cart = () => {
         >
           Clear All
         </button>
+      </div>
+
+      <div className="flex justify-end mt-10">
+        <div className="bg-gray-700 w-[15rem] px-3 py-2">
+          <div className="flex justify-between items-center">
+            <p className="font-serif font-semibold">Subtotal: </p>
+            <p>
+              <PriceFormat price={total_price} />
+            </p>
+          </div>
+          <div className="flex justify-between items-center my-2">
+            <p className="font-serif font-semibold">Delivery fee: </p>
+            <p>
+              <PriceFormat price={delivery} />
+            </p>
+          </div>
+          <div className="flex justify-between items-center text-red-500">
+            <p className="font-serif font-semibold">Total order: </p>
+            <p>
+              <PriceFormat price={delivery + total_price} />
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

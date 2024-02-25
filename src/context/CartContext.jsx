@@ -14,6 +14,7 @@ const initialState = {
   cart: getLocalItems(),
   total_price: "",
   total_items: "",
+  delivery: 200,
 };
 
 const CartProvider = ({ children }) => {
