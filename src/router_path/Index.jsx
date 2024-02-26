@@ -7,6 +7,7 @@ import Error from "../components/Error";
 import Details from "../page_details/Details";
 import Products from "../components/Products";
 import Cart from "../components/Cart";
+import TrastedDetails from "../trasted_brand/TrastedDetails";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Route path="/cart" element={<Cart />} />
       <Route path="*" element={<Error />} />
       <Route path="/details/:id" element={<Details />} />
+      <Route path="/trasteddetails/:id" element={<TrastedDetails />} />
     </Routes>
   );
 };

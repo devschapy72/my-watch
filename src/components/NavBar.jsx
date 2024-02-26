@@ -30,7 +30,7 @@ const NavBar = () => {
             to="/about"
             className="active-nav hover:text-red-600 hover:underline duration-300"
           >
-            About
+            About Us
           </NavLink>
         </li>
         <li>
@@ -73,7 +73,7 @@ const NavBar = () => {
 
       {/* MOBILE_NAV_BAR */}
       <ul
-        className="lg:hidden fixed top-0 left-0 w-[100%] sm:w-[60%] bg-gray-700 shadow-xl h-screen  text-md font-serif duration-300"
+        className="lg:hidden fixed top-0 left-0 w-[100%] sm:w-[60%] bg-gray-700 shadow-xl h-screen  text-md font-serif duration-300 z-50"
         style={{ left: openSlider ? 0 : "-100%" }}
       >
         <div className="flex justify-between items-center w-full h-16 shadow-xl px-5">
@@ -111,7 +111,7 @@ const NavBar = () => {
               onClick={closeBar}
               className="active-nav hover:text-red-600 hover:underline duration-300"
             >
-              About
+              About Us
             </NavLink>
           </li>
           <hr className="border-gray-600 border-[2px] my-3" />

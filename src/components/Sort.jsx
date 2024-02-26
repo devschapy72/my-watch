@@ -3,11 +3,11 @@ import { BsFillGridFill, BsList } from "react-icons/bs";
 import { useFilterContext } from "../context/FilterContext";
 
 const Sort = () => {
-  const { filterProducts, gridView, setGridView, setListView } =
+  const { filterProducts, gridView, setGridView, setListView, sorting } =
     useFilterContext();
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex items-center gap-2">
+    <div className="flex flex-wrap gap-5 justify-between items-center">
+      <div className="flex items-center gap-5">
         <button
           onClick={setGridView}
           className={
@@ -37,7 +37,29 @@ const Sort = () => {
         </p>
       </div>
       <div>
-        <h1>select price</h1>
+        <form action="#">
+          <label htmlFor="sort"></label>
+          <select
+            name="sort"
+            id="sort"
+            className="bg-transparent border-2"
+            onClick={sorting}
+          >
+            <option className="bg-gray-800">Select(price)</option>
+            <option value="lowest" className="bg-gray-800">
+              Price(lowest)
+            </option>
+            <option value="highest" className="bg-gray-800">
+              Price(highest)
+            </option>
+            <option value="a-z" className="bg-gray-800">
+              Price(a-z)
+            </option>
+            <option value="z-a" className="bg-gray-800">
+              Price(z-a)
+            </option>
+          </select>
+        </form>
       </div>
     </div>
   );

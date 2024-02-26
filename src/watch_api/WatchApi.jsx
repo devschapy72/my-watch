@@ -6,12 +6,13 @@ const WatchApi = [
     image:
       "https://media.istockphoto.com/id/458066987/photo/rolex-deepsea-wristwatch.jpg?s=612x612&w=0&k=20&c=T3frhDuFQw9YvmuPd0GeK_Ka5NlEFlCmqtWrJtI7beA=",
     price: "20000",
-    color: ["#ecf0f1", "#e67e22", "#130f40"],
+    color: ["#000", "#ecf0f1", "#e67e22"],
     stock: 10,
     stars: 5,
     details:
       "Rolex watches are synonymous with precision, luxury, and timeless style. Crafted with meticulous attention to detail, they are coveted for their elegance and reliability. Each timepiece represents a blend of tradition and innovation, making Rolex a symbol of excellence in watchmaking.",
   },
+
   {
     id: "oesfshdfhes0esc",
     company: "Audemars Piguet",
@@ -19,7 +20,7 @@ const WatchApi = [
     price: "20000",
     image:
       "https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR010431AA/importer/standup.png.transform.approductmain.png",
-    color: ["#ecf0f1", "#e67e22", "#130f40"],
+    color: ["#ffa502", "#ecf0f1", "#130f40"],
     stock: 16,
     stars: 4.5,
     details:
@@ -32,7 +33,7 @@ const WatchApi = [
     price: "15000",
     image:
       "https://cdn1.ethoswatches.com/media/catalog/product/cache/6e5de5bc3d185d8179cdc7258143f41a/o/m/omega-seamaster-210-62-42-20-03-001-multiple-3.jpg",
-    color: ["#ecf0f1", "#e67e22", "#130f40"],
+    color: ["#130f40", "#ecf0f1", "#e67e22"],
     stock: 18,
     stars: 4.5,
     details:
