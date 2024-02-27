@@ -1,8 +1,70 @@
-# React + Vite
+My Watch - Ecommerce Website
+Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Watch is an ecommerce website designed specifically for purchasing watches. It provides various features to enhance the shopping experience for customers. The website utilizes a JSON API file to manage product data and interactions. Some of the key functionalities include:
 
-Currently, two official plugins are available:
+    View Product Detail: Customers can view detailed information about each product, including specifications, images, and pricing.
+    Select Brand: Users can filter products by brand to narrow down their search.
+    Select Price Range: Customers have the option to filter products based on price range, helping them find products within their budget.
+    Search Product: A search functionality allows users to search for specific products by name or keywords.
+    Limited Stock Notification: Notifications are displayed for products with limited stock availability, encouraging customers to make quick purchases.
+    Customer Ratings: Product pages display customer ratings and reviews, providing valuable feedback for potential buyers.
+    Choose Color: Customers can select from available color options for each product.
+    Add to Cart: Users can add products to their shopping cart for purchase.
+    Remove Product: The option to remove products from the cart is available, allowing customers to manage their selections.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation
+
+To install the dependencies, run:
+
+bash
+
+npm install
+
+Usage
+
+To start the development server, run:
+
+bash
+
+npm run dev
+
+To build the project for production, run:
+
+bash
+
+npm run build
+
+To lint the code, run:
+
+bash
+
+npm run lint
+
+To preview the production build locally, run:
+
+bash
+
+npm run preview
+
+Dependencies
+
+    React - ^18.2.0
+    React DOM - ^18.2.0
+    React Icons - ^5.0.1
+    React Router DOM - ^6.22.1
+    Swiper - ^11.0.6
+
+Development Dependencies
+
+    @types/react - ^18.2.56
+    @types/react-dom - ^18.2.19
+    @vitejs/plugin-react - ^4.2.1
+    Autoprefixer - ^10.4.17
+    ESLint - ^8.56.0
+    ESLint Plugin React - ^7.33.2
+    ESLint Plugin React Hooks - ^4.6.0
+    ESLint Plugin React Refresh - ^0.4.5
+    PostCSS - ^8.4.35
+    Tailwind CSS - ^3.4.1
+    Vite - ^5.1.4
