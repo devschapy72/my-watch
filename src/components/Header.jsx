@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "./NavBar";
-import Login from "./Login";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -21,7 +20,6 @@ const Header = () => {
         </h3>
       </div>
       <NavBar />
-      <Login />
     </div>
   );
 };
