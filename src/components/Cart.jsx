@@ -7,6 +7,21 @@ import PriceFormat from "./PriceFormat";
 const Cart = () => {
   const { cart, clearAll, total_price, delivery } = useCartContext();
 
+  if (cart.length === 0) {
+    return (
+      <div className="px-5 h-[50vh] flex flex-col justify-center items-center">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-extrabold mb-5 sm:mb-7 md:mb-10">
+          Please Add Product
+        </h2>
+        <NavLink to="/products">
+          <button className="bg-red-700 px-10 xs:px-12 sm:px-14 py-3 border-2 border-red-700 hover:bg-transparent duration-300">
+            Add Product
+          </button>
+        </NavLink>
+      </div>
+    );
+  }
+
   return (
     <div className="w-11/12 sm:w-10/12 lg:w-9/12 mx-auto">
       <div className="grid grid-cols-2">
