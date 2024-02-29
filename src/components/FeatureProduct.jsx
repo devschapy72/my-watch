@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { BsGift } from "react-icons/bs";
 import { TfiCheckBox } from "react-icons/tfi";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const FeatureProduct = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="bg-gray-700 my-10">
       <div className="w-11/12 lg:w-10/12 mx-auto grid md:grid-cols-2 items-center py-10 gap-8">
         {/* imag_div */}
-        <div>
+        <div data-aos="fade-down-right" data-aos-duration="2000">
           <figure>
             <img
               src="https://media.istockphoto.com/id/458066987/photo/rolex-deepsea-wristwatch.jpg?s=612x612&w=0&k=20&c=T3frhDuFQw9YvmuPd0GeK_Ka5NlEFlCmqtWrJtI7beA="
@@ -17,7 +22,7 @@ const FeatureProduct = () => {
           </figure>
         </div>
 
-        <div>
+        <div data-aos="fade-down-left" data-aos-duration="2000">
           <h2 className=" text-lg xs:text-xl sm:text-2xl md:text-3xl font-serif font-bold">
             FEATURE PRODUCT
           </h2>

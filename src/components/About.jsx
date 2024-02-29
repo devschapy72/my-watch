@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div>
       <div className="relative">
@@ -28,13 +33,17 @@ const About = () => {
       </div>
 
       <div className="w-10/12 xs:w-8/12 md:w-10/12 lg:w-8/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <figure>
+        <figure data-aos="fade-up" data-aos-duration="3000">
           <img
             src="https://static-01.daraz.com.bd/p/c7848f8b648843d17d903866506e238f.jpg_750x750.jpg_.webp"
-            alt=""
+            alt="about image"
           />
         </figure>
-        <div>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-2">
             Dream Watch
           </h2>

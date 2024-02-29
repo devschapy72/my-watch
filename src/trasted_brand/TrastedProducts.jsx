@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const TrastedProducts = ({ id, image, company }) => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <NavLink to={`/trasteddetails/${company}`} key={id}>
+    <NavLink
+      to={`/trasteddetails/${company}`}
+      key={id}
+      data-aos="flip-left"
+      data-aos-duration="2000"
+    >
       <div className="relative">
         <figure>
           <img src={image} alt={company} className="w-full h-40 object-cover" />

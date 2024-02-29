@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PriceFormat from "./PriceFormat";
 import { NavLink } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Product = ({ id, image, name, company, price }) => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="bg-gray-700 shadow-xl">
+    <div
+      className="bg-gray-700 shadow-xl"
+      data-aos="flip-left"
+      data-aos-duration="2000"
+    >
       <figure>
         <img src={image} alt={name} className="w-full h-44 object-cover" />
       </figure>
