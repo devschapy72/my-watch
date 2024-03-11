@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="-translate-y-[3.9%] relative">
+    <div className=" relative">
       <video
         src="https://content.rolex.com/v7/dam/homepage/homepage-stacker/collection/professional-watches/submariner/flagship/homepage-collection-professional-watches-submariner-flagship-autoplay.mp4"
         type="video/mp4"

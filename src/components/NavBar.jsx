@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { BsCart4 } from "react-icons/bs";
 import { useCartContext } from "../context/CartContext";
+import Login from "./Login";
 
 const NavBar = () => {
   const { total_items } = useCartContext();
@@ -153,6 +154,10 @@ const NavBar = () => {
             </NavLink>
           </li>
 
+          <hr className="border-gray-600 border-[2px] my-3" />
+          <button className="pl-5">
+            <Login />
+          </button>
           <hr className="border-gray-600 border-[2px] my-3" />
         </div>
       </ul>
